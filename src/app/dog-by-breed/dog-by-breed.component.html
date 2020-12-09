@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>Dog Data by Breed</h1>
+    <select (change)="getRandomDagByBreed($event.target.value)">
+       <option value="">Select Breed</option>
+        <option *ngFor="let dog of dogs" value={{dog[0]}}>
+            {{dog[0]}}
+        </option>
+    </select>
+    <div *ngIf="imageData">
+        <img [src]="imageData" [alt]="imageData">
+    </div>
+
+</div>
